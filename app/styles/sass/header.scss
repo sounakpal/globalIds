@@ -1,0 +1,78 @@
+@import "theme.scss";
+@import "typo.scss";
+
+header {
+    background: linear-gradient(to right, #07c7f9 0%,#2989d8 100%,#207cca 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#07c7f9', endColorstr='#7db9e8',GradientType=1 );
+    color: $white;
+    padding: $medium-spacing;
+    .icons{
+      width: 30px;
+      height: 30px;
+      margin: 0 $medium-spacing;
+    }
+
+}
+.headerRightSection{
+    @include layout-hor;
+    @include small-font;
+    align-items: center;
+    height: 100%;
+    padding: $medium-spacing 0;
+
+}
+#logo{
+  background: transparent url('../images/logo.png') left top no-repeat;
+  height: 45px;
+  width: 173px;
+}
+
+.searchIcon{
+  background: transparent url('../images/search.png') center center no-repeat;
+}
+.user{
+  background: transparent url('../images/user.png') center center no-repeat;
+}
+.notify{
+  background: transparent url('../images/notify.png') center center no-repeat;
+  font-size: 9px;
+  position: relative;
+  .notifyText{
+    background: #ff7474;
+    border-radius: 50%;
+    padding: 3px;
+    position: absolute;
+    right: -4px;
+    top: 5px;
+  }
+}
+.userName{
+  margin: 0 $large-spacing 0 $small-spacing;
+}
+.logout{
+  width: 44px;
+  height: 22px;
+  background: transparent url('../images/logout.png') center center no-repeat;
+}
+@media #{$tablet} {
+    header {
+      @include layout-hor;
+      align-items: center;
+      height: 70px;
+      box-sizing: border-box;
+      padding: 0 $large-spacing;
+      .icons{
+        margin: 0;
+      }
+    }
+
+  .headerRightSection{
+   padding: 0;
+    .devider{
+      width: 1px;
+      height: 100%;
+      background: $border-header;
+      margin: 0 $large-spacing;
+    }
+  }
+}

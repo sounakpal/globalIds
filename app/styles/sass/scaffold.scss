@@ -31,14 +31,6 @@ li {
     padding: 0;
 }
 
-header {
-    padding: 10px;
-    position: relative;
-}
-
-.header-font {
-    @include xxxl-font;
-}
 
 #content {
     @include layout-hor;
@@ -83,15 +75,6 @@ header {
     padding: 10px;
     line-height: 1.5;
 }
-#no-result-error{
-    @extend #search-location;
-}
-#travel-dates {
-    @include small-font;
-    padding-top: $small-spacing;
-    border-top: 1px solid $primary-color;
-}
-
 #result-body {
     padding: $large-spacing;
     overflow: auto;

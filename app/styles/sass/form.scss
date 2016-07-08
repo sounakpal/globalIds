@@ -14,10 +14,6 @@
 }
 
 .trip-tab-item {
-    background: $secondary-bg;
-    padding: $small-spacing $primary-spacing;
-    border: 1px solid $primary-bg;
-    border-radius: $primary-spacing $primary-spacing 0 0;
     border-bottom: 0;
     cursor: pointer;
     opacity: 0.5;
@@ -35,13 +31,9 @@
 #input-section {
     @include spacing-margin;
     margin-top: 0;
-    padding: $primary-spacing 0;
-    background: $secondary-bg;
-    border: 1px solid $primary-bg;
 }
 
 .input-row {
-    padding: $primary-spacing;
 }
 
 .input {
@@ -52,17 +44,9 @@
     box-sizing: border-box;
     display: block;
     outline: 0;
-    padding: $primary-spacing;
     transition: transform 225ms ease-in-out;
     width: 100%;
-    background: $primary-bg;
-    @include placeholder {
-        color: #000;
-    }
-
     &[type="submit"]{
-      background: $primary-color;
-      color: $secondary-bg;
     }
 }
 
@@ -72,7 +56,6 @@
     @extend #input-section;
 
     .label{
-      padding: 0 $primary-spacing;
 
       @include medium-font;
     }
@@ -82,7 +65,6 @@
     @extend #form-area;
     @include small-font;
 
-    margin: $primary-spacing;
     min-height: 25px;
 }
 
