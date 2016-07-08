@@ -1,0 +1,59 @@
+    @import "theme.scss";
+
+    @mixin font-common-base(){
+      font-family: inherit;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @mixin font-common-nowrap(){
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @mixin xxxl-font{
+      @include font-common-base();
+      @include font-common-nowrap();
+
+      font-size: $font-xxxl;
+      font-weight: 400;
+      letter-spacing: -.026em;
+    }
+    @mixin xxl-font{
+      @include font-common-base();
+      @include font-common-nowrap();
+
+      font-size: $font-xxl;
+      font-weight: 400;
+      letter-spacing: -.026em;
+    }
+    @mixin xl-font{
+      @include font-common-base();
+      @include font-common-nowrap();
+
+      font-size: $font-xl;
+      font-weight: 400;
+      letter-spacing: -.026em;
+    }
+
+    @mixin large-font{
+      @include font-common-base();
+
+      font-size: $font-l;
+      font-weight: 100;
+      letter-spacing: -.026em;
+    }
+    @mixin medium-font{
+      @include font-common-base();
+
+      font-size: $font-m;
+      font-weight: 400;
+      letter-spacing: -.020em;
+    }
+    @mixin small-font{
+      @include font-common-base();
+
+      font-size: $font-s;
+      font-weight: 100;
+      letter-spacing: -.016em;
+    }

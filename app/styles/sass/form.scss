@@ -1,0 +1,127 @@
+@import "theme.scss";
+@import "typo.scss";
+
+#form-area {
+    @include relative-position;
+}
+
+#trip-tabs {
+    @extend #form-area;
+    @include spacing-margin;
+    @include small-font;
+    @include layout-hor;
+    margin-bottom: -1px;
+}
+
+.trip-tab-item {
+    background: $secondary-bg;
+    padding: $small-spacing $primary-spacing;
+    border: 1px solid $primary-bg;
+    border-radius: $primary-spacing $primary-spacing 0 0;
+    border-bottom: 0;
+    cursor: pointer;
+    opacity: 0.5;
+    &.active {
+        z-index: 1;
+        opacity: 1;
+    }
+}
+
+#round-trip {
+    @extend #form-area;
+    left: -5px;
+}
+
+#input-section {
+    @include spacing-margin;
+    margin-top: 0;
+    padding: $primary-spacing 0;
+    background: $secondary-bg;
+    border: 1px solid $primary-bg;
+}
+
+.input-row {
+    padding: $primary-spacing;
+}
+
+.input {
+    @include small-font;
+    appearance: none;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    outline: 0;
+    padding: $primary-spacing;
+    transition: transform 225ms ease-in-out;
+    width: 100%;
+    background: $primary-bg;
+    @include placeholder {
+        color: #000;
+    }
+
+    &[type="submit"]{
+      background: $primary-color;
+      color: $secondary-bg;
+    }
+}
+
+
+#filter-area {
+    @extend #form-area;
+    @extend #input-section;
+
+    .label{
+      padding: 0 $primary-spacing;
+
+      @include medium-font;
+    }
+}
+
+.range-section {
+    @extend #form-area;
+    @include small-font;
+
+    margin: $primary-spacing;
+    min-height: 25px;
+}
+
+.input-range {
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 15px;
+    outline: none;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    &::-webkit-slider-thumb {
+        pointer-events: all;
+        position: relative;
+        z-index: 1;
+        outline: 0;
+    }
+    &::-moz-range-thumb {
+        pointer-events: all;
+        position: relative;
+        z-index: 10;
+        -moz-appearance: none;
+        width: 9px;
+    }
+    &::-moz-range-track {
+        position: relative;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 1);
+        border: 0;
+    }
+    &:last-of-type::-moz-range-track {
+        -moz-appearance: none;
+        background: none transparent;
+        border: 0;
+    }
+    &[type=range]::-moz-focus-outer {
+        border: 0;
+    }
+  }
