@@ -1,0 +1,188 @@
+@import "theme.scss";
+@import "typo.scss";
+.bird-eye_header {
+    @include xl-font();
+    background: red;
+    text-align: center;
+    color: #ffffff;
+    line-height: 45px;
+    box-shadow: 0px 2px 15px -4px rgba(0, 0, 0, 0.75);
+    .smiley{
+	    width: 75px;
+	    height: 75px;
+	    display: inline-block;
+	    vertical-align: text-bottom;
+    	background: transparent url('../images/sad.png') center center no-repeat;
+    }
+    .on-track {
+        display: none;
+        background: green;
+        .smiley{
+    		background: transparent url('../images/smile.png') center center no-repeat;
+        }
+    }
+    &.on-track {
+        .off-track {
+            display: none;
+        }
+        .on-track {
+            display: block;
+        }
+    }
+    .track-item-container {
+    	color: $dark-text;
+        @include medium-font();
+    }
+    .track-items {
+        align-items: baseline;
+        padding: 0 $large-spacing;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.8);
+        span:last-child {
+            @include small-font();
+            margin-left: $small-spacing;
+        }
+    }
+}
+.bird-eye_content{
+	padding: 0 $large-spacing;
+	
+	.owner{
+		width: 100px;
+		margin: 0 10px;
+		text-align: center;
+	}
+
+	.bird-header{
+		@include large-font();
+
+		font-weight: 400;
+		text-transform: uppercase;
+		color: $semi-dark-text;
+		padding: $medium-spacing 0;
+		border-bottom: 1px solid $light-text;
+		margin-bottom: $medium-spacing;
+	}
+}
+.bird-eye_projects{
+	.each-item {
+		position: relative;
+		margin: $primary-spacing 0;
+
+
+		.owner{
+			color: $blue-text;
+		}
+
+		&.complete{
+			//when the data says the projects r complete
+			.item-count{
+				color: $green-text;
+			}
+		}
+
+		&.active{
+			//when toggle to open
+			.item-collapse-area{
+				max-height: 1000px;
+			}
+		}
+	}
+	.number{
+		@inculde medium-font();
+		background: $secondary-bg;
+		width: 66px;
+		height: 66px;
+		line-height: 66px;
+		color: $primary-text-color;
+		text-align: center;
+		border: 1px solid $light-text;
+		border-right: 0;
+	}
+
+	.item-area{
+		border: 1px solid $light-text;
+		position: relative;
+		background: #fff;
+	}
+
+	.item-count{
+		width: 183px;
+		text-align: center;
+		color: $red-text;
+	}
+	.item-clickable{
+		height: 66px;
+		overflow: hidden;
+		align-items: center;
+
+		.item-body{
+			@include small-font();
+			color: $primary-text-color;
+		}
+		
+		.owner{
+			@include medium-font();
+		}
+		.item-count{
+			@include large-font();
+		}
+		> div{
+			padding: $primary-spacing;
+			padding-right: 0;
+			box-sizing: border-box;
+
+		}
+	}
+
+	.item-collapse-area{
+		transition: max-height ease 0.3s;
+		will-change: max-height;
+		max-height: 0;
+		box-sizing: border-box;
+		overflow: hidden;
+		color: $secondary-text-color;
+	}
+	.collapse-items{
+		@include small-font();
+		border-bottom: 1px solid $semi-dark-text;
+		margin-left: $large-spacing;
+		margin-right: $primary-spacing;
+
+		.item-count{
+			width: 153px;
+			margin-left: $primary-spacing;
+		}
+		>div{
+			padding: $medium-spacing 0 $medium-spacing $primary-spacing;
+			box-sizing: border-box;
+			&:first-child{
+				padding-left: 0;
+			}
+		}
+
+		&:last-child{
+			border-bottom: 0;
+			margin-bottom: $medium-spacing;
+		}
+	}
+}
+
+@media #{$tablet} {
+    .bird-eye_header {
+        @include xxxl-font();
+        line-height: 95px;
+        .track-item-container {
+            @include xl-font();
+            flex-direction: row;
+            span:last-child {
+                @include medium-font();
+            }
+        }
+        .devider {
+            height: 100%;
+            width: 1px;
+            background: transparent;
+        }
+    }
+}

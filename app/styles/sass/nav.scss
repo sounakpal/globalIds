@@ -1,0 +1,63 @@
+@import "theme.scss";
+@import "typo.scss";
+
+
+
+#leftSection {
+	height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid;
+    transition: transform 0.3s ease;
+    will-change: transform;
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+#leftSection.active {
+	transform: translateX(0);
+}
+nav{
+	height: 100%;
+	width: 285px;
+	background: linear-gradient(to bottom, #565656 0%,#44333a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#565656', endColorstr='#44333a',GradientType=0 ); 
+
+	a{
+    	@include small-font;
+    	display: block;
+		text-decoration: none;
+		color: $secondary-text-color;
+		height: 60px;
+		position: relative;
+		line-height: 60px;
+		padding-left: $large-spacing;
+		border-bottom: 1px solid $border-menu;
+
+		&.active {
+			color: $selected-menu;
+
+			&:before{
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				width: 5px;
+				background: $selected-menu;
+			}
+		}
+	}
+}
+
+@media #{$desktop} {
+    #leftSection {
+        position: static;
+        width: 285px;
+    	transform: translateX(0);
+    }
+}

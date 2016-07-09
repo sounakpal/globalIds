@@ -31,6 +31,8 @@ import runSequence from 'run-sequence';
 import browserSync from 'browser-sync';
 import swPrecache from 'sw-precache';
 import gulpLoadPlugins from 'gulp-load-plugins';
+import gulpSubtree from 'gulp-subtree';
+import gulpClean from 'gulp-clean';
 import {output as pagespeed} from 'psi';
 import pkg from './package.json';
 
@@ -195,11 +197,18 @@ gulp.task('serve:dist', ['default'], () =>
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['lint', 'html', 'scripts', 'images', 'copy'],
+    [ 'html', 'scripts', 'images', 'copy'],
     'generate-service-worker',
     cb
   )
 );
+
+// Build then deploy to GitHub pages gh-pages branch
+gulp.task('build-deploy-gh-pages',['default'], () => {
+  return gulp.src('dist')
+    .pipe($.subtree())
+    .pipe($.clean());
+});
 
 // Run PageSpeed Insights
 gulp.task('pagespeed', cb =>

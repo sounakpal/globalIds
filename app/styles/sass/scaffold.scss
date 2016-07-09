@@ -31,58 +31,13 @@ li {
     padding: 0;
 }
 
-
-#content {
+.body-section{
     @include layout-hor;
-    @include relative-position;
-    flex: 1;
-    background-size: cover;
-}
 
-#leftSection {
-    transform: translateX(-100%);
-}
-#search-icon {
-}
-#leftSection {
-    width: 285px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    border-right: 1px solid;
-    transition: transform 0.3s ease;
-}
-
-//result section starts
-#result-section {
-    @include layout-ver;
-    flex: 1;
-    background: $primary-bg;
-}
-
-#result-header {
-    padding: $large-spacing 0;
-    margin: 0 $large-spacing;
-}
-
-#search-location {
-    @include xl-font;
-    flex: 1;
-}
-#main-body-text{
-    @include medium-font;
-    padding: 10px;
-    line-height: 1.5;
-}
-#result-body {
-    padding: $large-spacing;
-    overflow: auto;
-}
-
-@media #{$tablet} {
-    #leftSection {
-        position: static;
+        .content {
+        height: 100%;
+        overflow: auto;
+        box-sizing: border-box;
     }
-
 }
+

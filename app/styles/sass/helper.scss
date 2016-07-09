@@ -1,5 +1,12 @@
 //all the helper classes
-
+.layout-hor {
+	display: flex;
+	flex-direction: row;
+}
+.layout-ver {
+	display: flex;
+	flex-direction: column;
+}
 .fit{
 	position: absolute;
 	top: 0;
