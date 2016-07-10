@@ -15,7 +15,8 @@
     transition: transform 0.3s ease;
     will-change: transform;
     transform: translateX(-100%);
-    z-index: 1;
+    z-index: 9;
+    //putting maximum zi
 }
 
 #leftSection.active {
@@ -24,9 +25,7 @@
 nav{
 	height: 100%;
 	width: 285px;
-	background: linear-gradient(to bottom, #565656 0%,#44333a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#565656', endColorstr='#44333a',GradientType=0 ); 
-
+	@include black-grad();
 	a{
     	@include small-font;
     	display: block;

@@ -1,0 +1,98 @@
+@import "theme.scss";
+@import "typo.scss";
+.status-page{
+	padding: $large-spacing;
+}
+
+.table{
+	width: 100%;
+    border-collapse: collapse;
+	border: 1px solid $primary-bg;
+	background: $white;
+	color: $secondary-text-color;
+	th{
+		background: #f2f5fa;
+	}
+	.big-td{
+		min-width: 120px;
+	}
+	tr.hovered{
+		background: $table-yellow;
+	}
+	th , td{
+		padding: $primary-spacing;
+		position: relative;
+		@include xsmall-font();
+		border: 1px solid $primary-bg;
+		vertical-align: top;
+		min-width: 70px;
+	}
+
+	th{
+		text-align: left;
+		padding: 20px $primary-spacing;
+		color: $primary-text-color;
+		@include small-font();
+	}
+	td.textarea-td{
+		padding: 7px;
+	}
+	th.sorting{
+		cursor: pointer;
+		
+		&:before{
+			position: absolute;
+			right: 5px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&.ascending{
+			&:before{
+				content: '↓';
+			}
+		}
+
+		&.descending{
+			&:before{
+				content: '↑';
+			}
+		}
+	}
+
+	.saveClearContainer{
+		position: absolute;
+		@include xsmall-font();
+		text-transform: uppercase;
+		left: 15px;
+		bottom: 17px;
+		padding: 5px;
+		background: $white;
+		cursor: pointer;
+		opacity: 0;
+	}
+	.save{
+		color: $blue-text;
+		margin-right: $small-spacing;
+	}
+	.textarea{
+		appearance: none;
+		border:2px solid transparent;
+		background: transparent;
+		padding: $small-spacing;
+		padding-bottom: 40px;
+		@include xsmall-font();
+		color: $secondary-text-color;
+		resize: none;
+
+		&:focus{
+			border: 2px solid $light-text;
+			background: $white;
+			outline: $border-menu auto 2px;
+			&+.saveClearContainer{
+				display: block;
+				opacity: 1;
+			}
+		}
+	}
+
+}

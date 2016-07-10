@@ -17,7 +17,7 @@ $primary-text-color: #999fac;
 $secondary-text-color: #7a808c;
 $red-text: #fd786c;
 $green-text: #58dca0;
-
+$table-yellow: #feffef;
 $white: #fff;
 
 $primary-bg: #e6ebef;
@@ -39,6 +39,25 @@ $font-xl: 36px;
 $font-l: 24px;
 $font-m: 18px;
 $font-s: 16px;
+//shadow
+@mixin shadow{
+    box-shadow: 0px 2px 15px -4px rgba(0, 0, 0, 0.75);
+}
+//gradient
+@mixin green-grad {
+	background: linear-gradient(to right,  #1cbe85 0%,#93f9b9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1cbe85', endColorstr='#93f9b9',GradientType=1 ); 
+}
+
+@mixin red-grad {
+	background: linear-gradient(to right,  #fd746c 0%,#ff9068 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd746c', endColorstr='#ff9068',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin black-grad {
+	background: linear-gradient(to bottom,  #3f4954 0%,#2d343c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4954', endColorstr='#2d343c',GradientType=0 ); /* IE6-9 */
+}
 
 //grid
 @mixin layout-hor{
