@@ -9,8 +9,8 @@
 
     ui.allLoadFunctions = function() {
         ui.registerClickFunctions();
-        ui.checkDataCount();
-    }
+        ui.checkStatusProject();
+    };
 
     ui.registerClickFunctions = function() {
 
@@ -21,12 +21,19 @@
         $('.bird-eye_projects .each-item').on('click', function() {
             $(this).toggleClass('active');
         });
-    }
-    ui.checkDataCount = function() {
+    };
+    ui.checkStatusProject = function() {
         $('.bird-eye_projects .each-item').each(function() {
-            if ($(this).data('complete-projects') === $(this).data('total-projects')) {
-                $(this).addClass('complete');
-            }
+          var complete = $(this).data('complete-projects'),
+          total = $(this).data('total-projects'),
+          ele = $(this).find('.status-bar')[0],
+          percent = (complete/total * 100) +'%';
+          
+          if (complete === total) {
+              $(this).addClass('complete');
+          }
+
+          ele.style.width = percent;
         });
     }
 })(window, jQuery);

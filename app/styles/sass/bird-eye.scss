@@ -66,7 +66,6 @@
 }
 .bird-eye_projects{
 	.each-item {
-		position: relative;
 		margin: $primary-spacing 0;
 
 
@@ -79,6 +78,10 @@
 			.item-count{
 				color: $green-text;
 			}
+
+			.status-bar{
+				background: $green-text;
+			}
 		}
 
 		&.active{
@@ -87,6 +90,20 @@
 				max-height: 1000px;
 			}
 		}
+	}
+	.status-holder{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		z-index: 1;
+		background: rgba(207, 211, 218, 0.6);
+	}
+	.status-bar{
+		height: 100%;
+		background: linear-gradient(to right, #fc3250 0%,#f7c1b4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc3250', endColorstr='#f7c1b4',GradientType=1 );
 	}
 	.number{
 		@inculde medium-font();
@@ -112,6 +129,7 @@
 		color: $red-text;
 	}
 	.item-clickable{
+		position: relative;
 		height: 66px;
 		overflow: hidden;
 		align-items: center;
