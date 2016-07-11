@@ -10,6 +10,49 @@
 	border: 1px solid $border-table;
 	background: $white;
 	color: $secondary-text-color;
+	.content{
+		font-size: $font-14;
+		ol{
+			margin-left: $font-14;
+			margin-top: 5px;
+		}
+	}
+	.content-header{
+		color: $dark-text;
+		font-weight: 400;
+		margin-bottom: 5px;
+	}
+	.select-wrapper{
+		display: inline-block;
+	    border: 1px solid $border-table;
+	    position: relative;
+	    color: inherit;
+	    &:before{
+	    	content:"";
+		    border-color: #909090 transparent;
+		    border-style: solid;
+		    border-width: 4px 4px 0 4px;
+		    width: 0;
+		    height: 0;
+		    margin-left: -2px;
+		    top: 50%;
+		    right: 5px;
+		    margin-top: -2px;
+		    position: absolute;
+	    }
+	}
+	.select{
+		appearance: none;
+	    background: $white;
+	    outline: 0;
+	    border-radius: 0;
+	    color: inherit;
+	    font-size: $font-14;
+		border: 0;
+		font-weight: 100;
+	    padding: $primary-spacing;
+	}
+
 	th{
 		background: $table-header-bg;
 	}
@@ -32,6 +75,7 @@
 		text-align: left;
 		padding: 20px $primary-spacing;
 		color: $primary-text-color;
+		vertical-align: middle;
 		@include small-font();
 	}
 	td.textarea-td{
@@ -77,6 +121,8 @@
 	.textarea{
 		appearance: none;
 		border:2px solid transparent;
+		width: 100%;
+		box-sizing:border-box;
 		background: transparent;
 		padding: $small-spacing;
 		padding-bottom: 40px;

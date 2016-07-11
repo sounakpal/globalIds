@@ -6,7 +6,7 @@ $font-family: 'Roboto', 'Helvetica', sans-serif;
 
 //screen sizes
 $tablet: "(min-width: 768px)";
-$desktop: "(min-width: 1024px)";
+$desktop: "(min-width: 1025px)";
 
 //colors
 $dark-text: #444444;
@@ -19,6 +19,8 @@ $red-text: #fd786c;
 $green-text: #58dca0;
 $table-yellow: #feffef;
 $white: #fff;
+
+$touchpoint-black: rgba(0,0,0,0.7);
 
 $primary-bg: #e6ebef;
 $secondary-bg: #f2f5fa;
@@ -39,6 +41,7 @@ $font-xl: 36px;
 $font-l: 24px;
 $font-m: 18px;
 $font-s: 16px;
+$font-14: 14px;
 //shadow
 @mixin shadow{
     box-shadow: 0px 2px 15px -4px rgba(0, 0, 0, 0.75);

@@ -73,9 +73,6 @@
 		margin: $primary-spacing 0;
 
 
-		.owner{
-			color: $blue-text;
-		}
 
 		&.complete{
 			//when the data says the projects r complete
@@ -136,6 +133,7 @@
 		height: 66px;
 		overflow: hidden;
 		align-items: center;
+		cursor: pointer;
 
 		.item-body{
 			@include small-font();
@@ -166,12 +164,15 @@
 	}
 	.collapse-items{
 		@include small-font();
-		border-bottom: 1px solid $semi-dark-text;
+		border-bottom: 1px solid $border-table;
 		margin-left: $large-spacing;
 		margin-right: $primary-spacing;
-
-		.item-count{
-			width: 153px;
+		
+		.owner{
+			color: $blue-text;
+		}
+		.item-count{    
+			width: 115px;
 			margin-left: $primary-spacing;
 		}
 		>div{

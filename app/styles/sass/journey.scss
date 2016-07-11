@@ -35,7 +35,7 @@
 }
 
 .reviews{
-	@include small-font();
+	@include medium-font();
 	>div{
 		margin-right: $large-spacing;
 		padding: $primary-spacing;

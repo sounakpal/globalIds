@@ -1,0 +1,39 @@
+@import "theme.scss";
+@import "typo.scss";
+.touchpoint-page {
+    padding: $large-spacing;
+    // .table {
+    // 	.textarea{
+    // 		font-size: 12px;
+    // 	}
+    // }
+}
+.touchpoint-items{
+
+	margin-bottom: $large-spacing;
+
+	.items{
+		flex: 1;
+		background: $touchpoint-black;
+		color: $primary-text-color;
+		padding: $primary-spacing;
+		margin-right: $large-spacing;
+		@include small-font();
+		
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	.footer{
+		color: $white;
+		margin-top: $small-spacing;
+		@include xsmall-font();
+		
+		.layout-hor{
+			align-items: ceter;
+			justify-content: space-between;
+		}
+
+	}
+}
