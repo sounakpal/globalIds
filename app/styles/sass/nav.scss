@@ -28,6 +28,7 @@ nav{
 	@include black-grad();
 	a{
     	@include small-font;
+    	font-weight: normal;
     	display: block;
 		text-decoration: none;
 		color: $secondary-text-color;

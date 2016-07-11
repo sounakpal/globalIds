@@ -111,7 +111,11 @@ gulp.task('scripts', () =>
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
-      './app/scripts/main.js'
+      './app/scripts/main.js',
+      './app/amcharts/amcharts.js',
+      './app/amcharts/xy.js',
+      './app/amcharts/serial.js',
+      './app/scripts/chart.js'
       // Other scripts
     ])
       .pipe($.newer('.tmp/scripts'))
@@ -193,11 +197,22 @@ gulp.task('serve:dist', ['default'], () =>
   })
 );
 
+// Minify the images data
+gulp.task('images-copy', () =>
+    gulp.src([
+      './app/amcharts/images/**.gif',
+      './app/amcharts/images/**.png',
+      './app/amcharts/images/**.svg'
+      // Other scripts
+    ])
+      // Output files
+      .pipe(gulp.dest('dist/amcharts/images'))
+);
 // Build production files, the default task
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    [ 'html', 'scripts', 'images', 'copy'],
+    [ 'images-copy','html', 'scripts', 'images', 'copy'],
     'generate-service-worker',
     cb
   )

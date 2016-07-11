@@ -7,11 +7,11 @@
 .table{
 	width: 100%;
     border-collapse: collapse;
-	border: 1px solid $primary-bg;
+	border: 1px solid $border-table;
 	background: $white;
 	color: $secondary-text-color;
 	th{
-		background: #f2f5fa;
+		background: $table-header-bg;
 	}
 	.big-td{
 		min-width: 120px;
@@ -23,7 +23,7 @@
 		padding: $primary-spacing;
 		position: relative;
 		@include xsmall-font();
-		border: 1px solid $primary-bg;
+		border: 1px solid $border-table;
 		vertical-align: top;
 		min-width: 70px;
 	}

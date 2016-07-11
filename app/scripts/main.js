@@ -1,4 +1,4 @@
-(function(window,$) {
+(function(window) {
     'use strict';
     // body...
     window.addEventListener('load', function(e) {
@@ -70,4 +70,4 @@
 
 
 
-})(window, jQuery);
+})(window);

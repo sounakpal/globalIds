@@ -16,12 +16,12 @@
     }
     .on-track {
         display: none;
-        @include green-grad();
         .smiley{
     		background: transparent url('../images/smile.png') center center no-repeat;
         }
     }
     &.on-track {
+        @include green-grad();
         .off-track {
             display: none;
         }
@@ -51,6 +51,10 @@
 		width: 100px;
 		margin: 0 10px;
 		text-align: center;
+	}
+	.itemsOnTrack,
+	.owner{
+		@include medium-font;
 	}
 
 	.bird-header{
@@ -123,7 +127,7 @@
 	}
 
 	.item-count{
-		width: 183px;
+		width: 145px;
 		text-align: center;
 		color: $red-text;
 	}

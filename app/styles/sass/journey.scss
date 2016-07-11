@@ -1,0 +1,55 @@
+@import "theme.scss";
+@import "typo.scss";
+
+.section-header{
+	@include xsmall-font();
+	color: $primary-text-color;
+	border-bottom: 1px solid $border-table;
+	padding-bottom: $medium-spacing;
+	margin-bottom: $medium-spacing;
+}
+.journey-page{
+	padding: $large-spacing;
+}
+.charts{
+	width: 100%;
+	height: 300px;
+}
+.chart-container{
+	background: $white;
+	border: 1px solid $border-table;
+	@include medium-font();
+	color: $primary-text-color;
+	margin-bottom: $large-spacing;
+}
+.chart-header{
+	background: $table-header-bg;
+	padding: $primary-spacing $large-spacing;
+	border-bottom: 1px solid $border-table;
+}
+.chart-body{
+	@include layout-hor();
+	padding: $medium-spacing;
+	align-items: center;
+	justify-content: center-justefied;
+}
+
+.reviews{
+	@include small-font();
+	>div{
+		margin-right: $large-spacing;
+		padding: $primary-spacing;
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	.goodreview{
+		color: $white;
+		@include green-grad();
+	}
+	.badreview{
+		color: $white;
+		@include red-grad();
+	}
+}
