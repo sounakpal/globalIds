@@ -15,6 +15,7 @@
 		ol{
 			margin-left: $font-14;
 			margin-top: 5px;
+			line-height: 1.5;
 		}
 	}
 	.content-header{
@@ -81,12 +82,14 @@
 	td.textarea-td{
 		padding: 7px;
 	}
-	th.sorting{
+	.sorting{
 		cursor: pointer;
-		
+		position: relative;
+		user-select:none;
+
 		&:before{
 			position: absolute;
-			right: 5px;
+			right: -15px;
 			top: 50%;
 			transform: translateY(-50%);
 		}
@@ -105,10 +108,10 @@
 
 	.saveClearContainer{
 		position: absolute;
-		@include xsmall-font();
+		@include xxsmall-font();
 		text-transform: uppercase;
-		left: 15px;
-		bottom: 17px;
+		left: 2px;
+    	bottom: 5px;
 		padding: 5px;
 		background: $white;
 		cursor: pointer;
@@ -118,10 +121,14 @@
 		color: $blue-text;
 		margin-right: $small-spacing;
 	}
+	.textarea-wrap{
+		position: relative;
+	}
 	.textarea{
 		appearance: none;
 		border:2px solid transparent;
 		width: 100%;
+		margin: 0;
 		box-sizing:border-box;
 		background: transparent;
 		padding: $small-spacing;

@@ -1,0 +1,37 @@
+@import "theme.scss";
+@import "typo.scss";
+
+.pill-group{
+	display:inline-flex;
+	flex-direction: row;
+    align-items: center;
+    background: $white;
+    border: 1px solid $border-table;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.pill {
+	padding: 2px 5px;
+    cursor: pointer;
+	white-space:nowrap;
+    text-decoration: none;
+    color: $border-table;
+    line-height: 1.2;
+    border-right: 1px solid $border-table;
+	&.active{
+    	color: $dark-text;
+    	background: $secondary-bg;
+	}
+
+	&:hover{
+		background: $light-text;
+		color: $dark-text;	
+	}
+
+    &:last-of-type{
+    	border-right: 0;
+    }
+}
+a {
+    background-color: transparent;
+}

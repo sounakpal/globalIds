@@ -5,11 +5,16 @@ html,
     font-family: $font-family;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 
 /* Shared Styles */
-
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
 h1,
 h2,
 h3,
@@ -34,9 +39,9 @@ li {
 
 .body-section{
     @include layout-hor;
+    overflow: hidden;
 
         .content {
-        height: 100%;
         overflow: auto;
         box-sizing: border-box;
     }

@@ -47,14 +47,14 @@
       @include font-common-base();
 
       font-size: $font-m;
-      font-weight: 400;
+      font-weight: normal;
       letter-spacing: -.020em;
     }
     @mixin small-font{
       @include font-common-base();
 
       font-size: $font-s;
-      font-weight: 100;
+      font-weight: normal;
       letter-spacing: -.016em;
     }
 
@@ -62,6 +62,13 @@
       @include font-common-base();
 
       font-size: 14px;
-      font-weight: 100;
+      font-weight: normal;
+      letter-spacing: -.01em;
+    }
+    @mixin xxsmall-font{
+      @include font-common-base();
+
+      font-size: 12px;
+      font-weight: normal;
       letter-spacing: -.01em;
     }

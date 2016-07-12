@@ -1,4 +1,5 @@
 //all the helper classes
+@import "theme.scss";
 .layout-hor {
 	display: flex;
 	flex-direction: row;
@@ -7,9 +8,19 @@
 	display: flex;
 	flex-direction: column;
 }
+
 .below-margin{
 	margin-bottom: 10px;
 }
+
+.on-track{
+	color: $green-text;
+}
+
+.of-track{
+	color: $red-text;
+}
+
 .fit{
 	position: absolute;
 	top: 0;

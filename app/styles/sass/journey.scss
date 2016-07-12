@@ -2,7 +2,7 @@
 @import "typo.scss";
 
 .section-header{
-	@include xsmall-font();
+	@include small-font();
 	color: $primary-text-color;
 	border-bottom: 1px solid $border-table;
 	padding-bottom: $medium-spacing;

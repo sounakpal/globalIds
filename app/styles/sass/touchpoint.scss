@@ -15,7 +15,7 @@
 	.items{
 		flex: 1;
 		background: $touchpoint-black;
-		color: $primary-text-color;
+		color: $light-text;
 		padding: $primary-spacing;
 		margin-right: $large-spacing;
 		@include small-font();
@@ -29,6 +29,7 @@
 		color: $white;
 		margin-top: $small-spacing;
 		@include xsmall-font();
+		line-height: 1.5;
 		
 		.layout-hor{
 			align-items: ceter;

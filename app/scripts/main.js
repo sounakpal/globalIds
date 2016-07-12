@@ -19,6 +19,12 @@
         });
 
         $('.bird-eye_projects .each-item').on('click', function() {
+            $(this).siblings('.each-item').removeClass('active');
+            $(this).toggleClass('active');
+        });
+
+        $('.pill-group .pill').on('click', function() {
+            $(this).siblings('.pill').removeClass('active');
             $(this).toggleClass('active');
         });
 
@@ -31,8 +37,8 @@
               $(this).removeClass('descending').addClass('ascending');
               //sorted ascending
             }else{
-              $(this).siblings('.ascending').removeClass('ascending');
-              $(this).siblings('.descending').removeClass('descending');
+              $(this).closest('.table').find('.ascending').removeClass('ascending');
+              $(this).closest('.table').find('.descending').removeClass('descending');
               $(this).addClass('ascending');
               //sorted ascending
             }

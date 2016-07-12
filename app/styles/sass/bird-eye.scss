@@ -127,6 +127,8 @@
 		width: 145px;
 		text-align: center;
 		color: $red-text;
+
+
 	}
 	.item-clickable{
 		position: relative;
@@ -170,10 +172,15 @@
 		
 		.owner{
 			color: $blue-text;
+			cursor: pointer;
 		}
 		.item-count{    
 			width: 115px;
 			margin-left: $primary-spacing;
+
+			&.on-track{
+				color: $green-text;
+			}
 		}
 		>div{
 			padding: $medium-spacing 0 $medium-spacing $primary-spacing;
