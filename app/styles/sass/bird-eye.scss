@@ -157,8 +157,8 @@
 	}
 
 	.item-collapse-area{
-		transition: max-height ease 0.3s;
-		will-change: max-height;
+		transition: all ease-in 0.5s;
+		will-change: all;
 		max-height: 0;
 		box-sizing: border-box;
 		overflow: hidden;
